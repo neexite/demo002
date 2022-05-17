@@ -37,6 +37,8 @@ export default {
   modules: [
   ],
 
+  serverMiddleware: ['~/api/testAPI.js'],
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
