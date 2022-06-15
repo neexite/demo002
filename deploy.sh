@@ -140,7 +140,7 @@ echo "Use $NPM_CMD to resolve packages"
 echo "2. Install $NPM_CMD packages"
 if [ -e "$DEPLOYMENT_SOURCE/package.json" ]; then
   cd "$DEPLOYMENT_SOURCE"
-  eval "$NPM_CMD" install --network-timeout 1000000 --ignore-engines
+  eval "$NPM_CMD" install --network-timeout 60000 --ignore-engines
   exitWithMessageOnError "Installing npm packages failed"
   echo "Finished installing npm packages"
   cd - > /dev/null
