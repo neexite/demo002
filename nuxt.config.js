@@ -1,5 +1,9 @@
 module.exports = {
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  server: {
+    port: process.env.PORT || 3000,
+    host: '0.0.0.0'
+  },
+
   head: {
     title: 'demo002',
     htmlAttrs: {
