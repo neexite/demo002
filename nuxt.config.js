@@ -3,6 +3,8 @@ module.exports = {
     port: process.env.PORT || 3000,
     host: '0.0.0.0'
   },
+  ssr: true,
+  target: 'server',
 
   head: {
     title: 'demo002',
@@ -20,6 +22,9 @@ module.exports = {
     ]
   },
 
+  axios: {
+    // proxy: true
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -39,11 +44,24 @@ module.exports = {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa',
+    'cookie-universal-nuxt',
   ],
 
   serverMiddleware: ['~/api/testAPI.js'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  pwa: {
+    icon: {
+      /* icon options */
+    },
+    workbox: {
+      enabled: true
+      /* workbox options */
+    }
   }
 }
